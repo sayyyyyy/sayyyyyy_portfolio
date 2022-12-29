@@ -1,4 +1,5 @@
 import { WorkElement } from "./workElement";
+import { TitleComponent } from "./titleComponent";
 
 export const WorkComponent = () => {
     type WorkType = {
@@ -11,8 +12,8 @@ export const WorkComponent = () => {
     ]
     return (
         <div className="h-screen">
-            <h2>WORK</h2>
-            <div className="">
+            <TitleComponent>WORK</TitleComponent>
+            <div className="grid">
                 {workList.map((work: WorkType) => {
                     return (
                         <WorkElement workSrc={work.workSrc} workTitle={work.workTitle}></WorkElement>

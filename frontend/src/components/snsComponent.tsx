@@ -1,3 +1,5 @@
+import { TitleComponent } from "./titleComponent";
+
 type SnsElementProps = {
     imageAlt: string;
     snsSrc: string;
@@ -18,7 +20,7 @@ const SnsElement = (props: SnsElementProps) => {
 export const SnsComponent = () => {
     return (
         <div className="h-screen">
-            <h2>SNS</h2>
+            <TitleComponent>SNS</TitleComponent>
             
             <SnsElement 
                 imageAlt="Twitter icon" 
