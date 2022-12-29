@@ -6,14 +6,19 @@ export const WorkComponent = () => {
         workSrc: string;
         workTitle: string;
     }
-    const workList = [
-        {workSrc: "images/KnowledgeLibrary.png", workTitle: "Knowledge Library"},
 
+    const workList = [
+        {workSrc: "images/works/KnowledgeLibrary.png", workTitle: "Knowledge Library"},
+        {workSrc: "images/works/MusicHouse.png", workTitle: "Music House"},
+        {workSrc: "images/works/GameMatching.png", workTitle: "ゲームでマッチング"},
+        {workSrc: "images/works/SpaceShuttle.png", workTitle: "Space Shuttle"},
+        {workSrc: "images/works/Sugures.png", workTitle: "すぐレス"},
     ]
+    
     return (
         <div className="h-screen">
             <TitleComponent>WORK</TitleComponent>
-            <div className="grid">
+            <div className="grid grid-cols-3">
                 {workList.map((work: WorkType) => {
                     return (
                         <WorkElement workSrc={work.workSrc} workTitle={work.workTitle}></WorkElement>

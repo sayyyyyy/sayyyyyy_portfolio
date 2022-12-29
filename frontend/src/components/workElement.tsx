@@ -6,8 +6,8 @@ type workElementProps = {
 export const WorkElement = (props: workElementProps) => {
     const { workSrc, workTitle } = props
     return ( 
-    <div>
-        <img alt="workelement" src={workSrc} className="w-64"></img>
+    <div className="flex flex-col items-center">
+        <img alt="work image" src={workSrc} className="w-64"></img>
         <p>{workTitle}</p>
     </div>
     );
