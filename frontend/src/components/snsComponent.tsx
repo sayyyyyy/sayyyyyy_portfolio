@@ -17,7 +17,7 @@ const SnsElement = (props: SnsElementProps) => {
 
 export const SnsComponent = () => {
     return (
-        <div>
+        <div className="h-screen">
             <h2>SNS</h2>
             
             <SnsElement 
