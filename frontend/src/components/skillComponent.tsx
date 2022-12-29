@@ -2,8 +2,8 @@ import { TitleComponent } from "./titleComponent";
 
 export const SkillComponent = () => {
     return(
-        <div className="h-screen">
+        <section id="skill-container" className="h-screen">
             <TitleComponent>SKILL</TitleComponent>
-        </div>
+        </section>
     );
 }

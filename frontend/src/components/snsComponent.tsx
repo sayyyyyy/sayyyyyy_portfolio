@@ -10,8 +10,8 @@ type SnsElementProps = {
 const SnsElement = (props: SnsElementProps) => {
     const { imageAlt, snsSrc, snsHref, snsText } = props
     return (
-        <div>
-            <img alt={imageAlt} src={snsSrc}></img>
+        <div className="flex">
+            <img alt={imageAlt} src={snsSrc} className="w-20 h-20"></img>
             <a href={snsHref}><p>{snsText}</p></a>
         </div>
     );
@@ -19,33 +19,34 @@ const SnsElement = (props: SnsElementProps) => {
 
 export const SnsComponent = () => {
     return (
-        <div className="h-screen">
+        <section id="sns-container" className="h-screen">
             <TitleComponent>SNS</TitleComponent>
-            
-            <SnsElement 
-                imageAlt="Twitter icon" 
-                snsSrc="images/twitter_icon.png" 
-                snsHref="https://twitter.com/sayyyyyy46" 
-                snsText="@sayyyyyy46" 
-            />
-            <SnsElement 
-                imageAlt="Qiita icon" 
-                snsSrc="images/qiita_icon.png" 
-                snsHref="https://qiita.com/sayyyyyy" 
-                snsText="@sayyyyyy" 
-            />
-            <SnsElement 
-                imageAlt="GitHub icon" 
-                snsSrc="images/github_icon.png" 
-                snsHref="https://github.com/sayyyyyy" 
-                snsText="@sayyyyyy" 
-            />
-            <SnsElement 
-                imageAlt="Zenn icon" 
-                snsSrc="images/zenn_icon.svg" 
-                snsHref="https://zenn.dev/sayyyyyy" 
-                snsText="@sayyyyyy46" 
-            />
-        </div>
+            <div className="flex flex-col justify-center items-center">
+                <SnsElement 
+                    imageAlt="Twitter icon" 
+                    snsSrc="images/twitter_icon.png" 
+                    snsHref="https://twitter.com/sayyyyyy46" 
+                    snsText="@sayyyyyy46" 
+                />
+                <SnsElement 
+                    imageAlt="Qiita icon" 
+                    snsSrc="images/qiita_icon.png" 
+                    snsHref="https://qiita.com/sayyyyyy" 
+                    snsText="@sayyyyyy" 
+                />
+                <SnsElement 
+                    imageAlt="GitHub icon" 
+                    snsSrc="images/github_icon.png" 
+                    snsHref="https://github.com/sayyyyyy" 
+                    snsText="@sayyyyyy" 
+                />
+                <SnsElement 
+                    imageAlt="Zenn icon" 
+                    snsSrc="images/zenn_icon.svg" 
+                    snsHref="https://zenn.dev/sayyyyyy" 
+                    snsText="@sayyyyyy46" 
+                />
+            </div>
+        </section>
     );
 }

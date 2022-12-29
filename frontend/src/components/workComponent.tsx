@@ -14,9 +14,9 @@ export const WorkComponent = () => {
         {workSrc: "images/works/SpaceShuttle.png", workTitle: "Space Shuttle"},
         {workSrc: "images/works/Sugures.png", workTitle: "すぐレス"},
     ]
-    
+
     return (
-        <div className="h-screen">
+        <section id="work-container" className="h-screen">
             <TitleComponent>WORK</TitleComponent>
             <div className="grid grid-cols-3">
                 {workList.map((work: WorkType) => {
@@ -25,7 +25,7 @@ export const WorkComponent = () => {
                     );
                 })}
             </div>
-            
-        </div>
+            <p>すべて見る</p>
+        </section>
     );
 }
