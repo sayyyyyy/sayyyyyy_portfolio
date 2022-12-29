@@ -1,7 +1,7 @@
 
 export const HeaderComponent = () => {
     return (
-        <header className="flex">
+        <header className="flex fixed bg-zinc-300 w-screen">
             <p>SKILL</p>
             <p>WORK</p>
             <img alt="usericon" src="images/sayy.png" className="w-20"></img>
