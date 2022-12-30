@@ -16,7 +16,7 @@ export const WorkComponent = () => {
     ]
 
     return (
-        <section id="work-container" className="h-screen">
+        <section id="work-container" className="h-screen flex flex-col justify-center">
             <TitleComponent>WORK</TitleComponent>
             <div className="grid grid-cols-3">
                 {workList.map((work: WorkType) => {

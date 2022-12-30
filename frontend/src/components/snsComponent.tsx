@@ -19,7 +19,7 @@ const SnsElement = (props: SnsElementProps) => {
 
 export const SnsComponent = () => {
     return (
-        <section id="sns-container" className="h-screen">
+        <section id="sns-container" className="h-screen flex flex-col justify-center">
             <TitleComponent>SNS</TitleComponent>
             <div className="flex flex-col justify-center items-center">
                 <SnsElement 
