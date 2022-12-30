@@ -15,13 +15,24 @@ type workElementProps = {
 }
 
 export const WorkElement = (props: workElementProps) => {
-    const { workSrc, workTitle } = props
+    const { workSrc, workTitle, workOverview, workObsession, workSkill, workPeriod, workLink, githubLink, workNumOfPeople, workResponsibilty } = props
 
     return (
-        <Link to="/workDetail" state={{workSrc:workSrc, workTitle:workTitle, workOverview:"説明", workObsession:"こだわり"}}>
+        <Link to="/workDetail" state={{
+            workSrc:workSrc, 
+            workTitle:workTitle, 
+            workOverview:workOverview, 
+            workObsession:workObsession,
+            workSkill:workSkill,
+            workPeriod:workPeriod,
+            workLink:workLink,
+            githubLink:githubLink,
+            workNumOfPeople:workNumOfPeople,
+            workResponsibilty: workResponsibilty
+        }}>
             <div className="flex flex-col items-center">
-                <img alt="work image" src={workSrc} className="w-64"></img>
-                <p>{workTitle}</p>
+                <img alt="work image" src={workSrc}></img>
+                <h2>{workTitle}</h2>
             </div>
         </Link>
 
