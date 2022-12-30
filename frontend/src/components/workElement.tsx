@@ -4,6 +4,14 @@ import { Link } from "react-router-dom";
 type workElementProps = {
     workSrc: string;
     workTitle: string
+    workOverview: string;
+    workObsession: string; 
+    workSkill: Array<string>;
+    workPeriod: string, 
+    workLink: string, 
+    githubLink: string, 
+    workNumOfPeople: number,
+    workResponsibilty: string
 }
 
 export const WorkElement = (props: workElementProps) => {

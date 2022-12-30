@@ -6,7 +6,15 @@ import { useNavigate } from "react-router-dom";
 export const WorkSection = () => {
     type WorkType = {
         workSrc: string;
-        workTitle: string;
+        workTitle: string
+        workOverview: string;
+        workObsession: string; 
+        workSkill: Array<string>;
+        workPeriod: string, 
+        workLink: string, 
+        githubLink: string, 
+        workNumOfPeople: number,
+        workResponsibilty: string
     }
 
     const workList = [
@@ -120,15 +128,39 @@ export const WorkSection = () => {
         },
         {
             workSrc: "", 
-            workTitle: "", 
-            workOverview: "", 
+            workTitle: "つなぐま", 
+            workOverview: "いらないものを気軽に取引できるサービス", 
+            workObsession: "繋がりを同大学に限定することで安心で気軽に取引できる", 
+            workSkill: ["HTML", "CSS", "TypeScript", "Vue.js", "Nuxt.js", "Ruby", "Ruby on rails", "MySQL", "Docker"], 
+            workPeriod: "1ヶ月", 
+            workLink: "", 
+            githubLink: "https://github.com/sayyyyyy/Tsunaguma", 
+            workNumOfPeople: 6,
+            workResponsibilty: "全体的なサポート"
+        },
+        {
+            workSrc: "", 
+            workTitle: "Fillin", 
+            workOverview: "カップラーメンの待ち時間が楽しくなるアプリ", 
             workObsession: "", 
-            workSkill: [], 
-            workPeriod: "", 
+            workSkill: ["Unity", "FireStore"], 
+            workPeriod: "2週間", 
+            workLink: "", 
+            githubLink: "", 
+            workNumOfPeople: 4,
+            workResponsibilty: "ブロックの変更処理、ブロックの保存、出現処理"
+        },
+        {
+            workSrc: "", 
+            workTitle: "areal-AirReal", 
+            workOverview: "空中に絵を描いて写真にできるサービス。他の人のも見ることができる。", 
+            workObsession: "", 
+            workSkill: ["Unity", "FireStore", "Firebase Storage", "Adobe XD", "Geospatial API"], 
+            workPeriod: "2週間", 
             workLink: "", 
             githubLink: "", 
             workNumOfPeople: 6,
-            workResponsibilty: ""
+            workResponsibilty: "写真データの保存から表示"
         },
     ]
 
@@ -140,7 +172,18 @@ export const WorkSection = () => {
             <div className="grid grid-cols-3">
                 {workList.map((work: WorkType) => {
                     return (
-                        <WorkElement workSrc={work.workSrc} workTitle={work.workTitle}></WorkElement>
+                        <WorkElement 
+                            workSrc={work.workSrc} 
+                            workTitle={work.workTitle} 
+                            workOverview={work.workOverview} 
+                            workObsession={work.workObsession} 
+                            workSkill={work.workSkill} 
+                            workPeriod={work.workPeriod} 
+                            workLink={work.workLink} 
+                            githubLink={work.githubLink} 
+                            workNumOfPeople={work.workNumOfPeople} 
+                            workResponsibilty={work.workResponsibilty} 
+                        />
                     );
                 })}
             </div>
