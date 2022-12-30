@@ -10,8 +10,8 @@ export const HistoryElement = (props: HistoryElementProps) => {
         <>
             <dt className="text-right">{historyAge}</dt>
             <dd>
-                <h3>{children}</h3>
-                <p>{historyDescription}</p>
+                <h3 className="font-bold md:text-xl lg:text2xl">{children}</h3>
+                <p className="md:text-lg lg:text-xl">{historyDescription}</p>
             </dd>
         </>
     );
