@@ -28,7 +28,7 @@ export const HistorySection = () => {
                     );
                 })}
             </dl>
-            <p onClick={() => {navigate('/historyAll')}}>すべて見る</p>
+            <p onClick={() => {navigate('/historyAll')}} className="flex justify-end mt-8 text-zinc-400">すべて見る ＞</p>
         </section>
     );
 }
