@@ -1,3 +1,4 @@
+import { useLocation } from "react-router-dom";
 
 type WorkDetailProps = {
     workSrc: string;
@@ -6,8 +7,10 @@ type WorkDetailProps = {
     workObsession: string;
 }
 
-export const WorkDetail = (props: WorkDetailProps) => {
-    const {workSrc, workTitle, workOverview, workObsession} = props
+export const WorkDetail = () => {
+    const location = useLocation()
+
+    const {workSrc, workTitle, workOverview, workObsession} = location.state
     return (
         <div>
             <h1>{workTitle}</h1>

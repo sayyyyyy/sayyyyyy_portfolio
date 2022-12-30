@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { MainPage } from "./pages/mainPage";
 import { WorkAll } from "./pages/workAll";
 import { HistoryAll } from "./pages/historyAll";
+import { WorkDetail } from "./pages/workDetailPage";
 
 export const Routers = () => {
     return ( 
@@ -11,6 +12,7 @@ export const Routers = () => {
             <Route path='*' element={<MainPage />}></Route>
             <Route path="workAll" element={<WorkAll />}/>
             <Route path="historyAll" element={<HistoryAll />} />
+            <Route path="workDetail" element={<WorkDetail />} />
         </Routes>
     );
 }
