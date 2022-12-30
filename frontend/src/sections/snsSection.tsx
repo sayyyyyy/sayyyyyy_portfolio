@@ -10,18 +10,20 @@ type SnsElementProps = {
 const SnsElement = (props: SnsElementProps) => {
     const { imageAlt, snsSrc, snsHref, snsText } = props
     return (
-        <div className="flex">
-            <img alt={imageAlt} src={snsSrc} className="w-20 h-20"></img>
-            <a href={snsHref}><p>{snsText}</p></a>
-        </div>
+        <a href={snsHref}>
+            <div className="flex m-4">
+                <img alt={imageAlt} src={snsSrc} className="w-10 h-10"></img>
+                <p className="text-xl ml-4 mt-1">{snsText}</p>
+            </div>
+        </a>
     );
 }
 
 export const SnsSection = () => {
     return (
-        <section id="sns-container" className="h-screen flex flex-col justify-center">
+        <section id="sns-container" className="mt-24">
             <TitleComponent>SNS</TitleComponent>
-            <div className="flex flex-col justify-center items-center">
+            <div className="flex flex-col justify-center items-start relative left-1/4 top">
                 <SnsElement 
                     imageAlt="Twitter icon" 
                     snsSrc="images/twitter_icon.png" 

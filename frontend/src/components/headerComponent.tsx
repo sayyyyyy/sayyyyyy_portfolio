@@ -1,8 +1,20 @@
 import { useNavigate } from "react-router-dom";
+import { Link as Scroll } from 'react-scroll';
+import React from 'react';
 
 export const HeaderComponent = () => {
     const navigate = useNavigate()
-    const test = () => {
+
+    const ref = React.createRef<HTMLDivElement>()
+    const scrollToBottomOfList = React.useCallback(() => {
+        ref!.current!.scrollIntoView({
+          behavior: 'smooth',
+          block: 'end',
+        })
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+      }, [ ref ])
+      
+    const navigateTo = (id: string) => {
         navigate('/')
     }
 

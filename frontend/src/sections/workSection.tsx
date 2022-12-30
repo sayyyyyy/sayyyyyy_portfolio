@@ -167,9 +167,9 @@ export const WorkSection = () => {
     const navigate = useNavigate()
 
     return (
-        <section id="work-container" className="h-screen flex flex-col justify-center">
+        <section id="work-container" className="mt-24">
             <TitleComponent>WORK</TitleComponent>
-            <div className="grid grid-cols-3">
+            <div className="md:grid md:grid-cols-2 xl:grid-cols-3">
                 {workList.map((work: WorkType) => {
                     return (
                         <WorkElement 

@@ -19,9 +19,9 @@ export const HistorySection = () => {
         {historyAge: "2022.11", historyContent: "技育CAMPハッカソンvol8　努力賞受賞", historyDescription: ""},
     ]
     return (
-        <section id="history-container" className="h-screen flex flex-col justify-center">
+        <section id="history-container" className="mt-24">
             <TitleComponent>HISTORY</TitleComponent>
-            <dl className="flex flex-wrap justify-between">
+            <dl className="flex flex-wrap justify-between mt-6">
                 {historyList.map((history) => {
                     return (
                         <HistoryElement historyAge={history.historyAge} historyDescription={history.historyDescription}>{history.historyContent}</HistoryElement>

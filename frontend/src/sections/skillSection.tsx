@@ -6,13 +6,13 @@ export const SkillSection = () => {
         {skillName: "TypeScript", skillSrc: "images/skills/typescript.png"}
     ]
     return(
-        <section id="skill-container" className="h-screen flex flex-col justify-center">
+        <div id="skill-container" className="">
             <TitleComponent>SKILL</TitleComponent>
             {skillList.map((skill) => {
                 return (
                     <SkillElement skillName={skill.skillName} skillSrc={skill.skillSrc}/>
                 );
             })}
-        </section>
+        </div>
     );
 }

@@ -30,9 +30,9 @@ export const WorkElement = (props: workElementProps) => {
             workNumOfPeople:workNumOfPeople,
             workResponsibilty: workResponsibilty
         }}>
-            <div className="flex flex-col items-center">
-                <img alt="work image" src={workSrc}></img>
-                <h2>{workTitle}</h2>
+            <div className="flex flex-col items-center m-5">
+                <img alt="work image" src={workSrc} className="h-64"></img>
+                <p className="bg-zinc-300">{workTitle}</p>
             </div>
         </Link>
 
