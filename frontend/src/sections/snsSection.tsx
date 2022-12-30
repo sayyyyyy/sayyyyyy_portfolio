@@ -1,4 +1,4 @@
-import { TitleComponent } from "./titleComponent";
+import { TitleComponent } from "../components/titleComponent";
 
 type SnsElementProps = {
     imageAlt: string;
@@ -17,7 +17,7 @@ const SnsElement = (props: SnsElementProps) => {
     );
 }
 
-export const SnsComponent = () => {
+export const SnsSection = () => {
     return (
         <section id="sns-container" className="h-screen flex flex-col justify-center">
             <TitleComponent>SNS</TitleComponent>

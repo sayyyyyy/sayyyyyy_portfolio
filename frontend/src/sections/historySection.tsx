@@ -1,11 +1,11 @@
-import { TitleComponent } from "./titleComponent";
-import { HistoryElement } from "./historyElement";
+import { TitleComponent } from "../components/titleComponent";
+import { HistoryElement } from "../components/historyElement";
 
 import "../components/history.css"
 
 import { useNavigate } from "react-router-dom";
 
-export const HistoryComponent = () => {
+export const HistorySection = () => {
     const navigate = useNavigate()
     const historyList = [
         {historyAge: "2021.03", historyContent: "プログラミングを始める"},

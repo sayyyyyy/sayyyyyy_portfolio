@@ -1,18 +1,18 @@
 // Componentの読み込み
-import { HomeComponent } from '../components/homeComponent';
-import { SkillComponent } from '../components/skillComponent';
-import { WorkComponent } from '../components/workComponent';
-import { HistoryComponent } from '../components/historyComponent';
-import { SnsComponent } from '../components/snsComponent';
+import { HomeSection } from '../sections/homeSection';
+import { SkillSection } from '../sections/skillSection';
+import { WorkSection } from '../sections/workSection';
+import { HistorySection } from '../sections/historySection';
+import { SnsSection } from '../sections/snsSection';
 
 export const MainPage = () => {
   return (
     <div>
-      <HomeComponent />
-      <SkillComponent />
-      <WorkComponent />
-      <HistoryComponent />
-      <SnsComponent />
+      <HomeSection />
+      <SkillSection />
+      <WorkSection />
+      <HistorySection />
+      <SnsSection />
     </div>
   );
 }

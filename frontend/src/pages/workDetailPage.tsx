@@ -7,7 +7,7 @@ type WorkDetailProps = {
     workObsession: string;
 }
 
-export const WorkDetail = () => {
+export const WorkDetailPage = () => {
     const location = useLocation()
 
     const {workSrc, workTitle, workOverview, workObsession} = location.state

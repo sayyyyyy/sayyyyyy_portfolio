@@ -2,7 +2,7 @@ import "../components/history.css"
 
 import { HistoryElement } from "../components/historyElement"
 
-export const HistoryAll = () => {
+export const HistoryAllPage = () => {
     const history2021 = [
         {historyAge: "2021.03", historyContent: "プログラミングを始める"},
         {historyAge: "2021.03", historyContent: "ハッカソン初参加"},

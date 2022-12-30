@@ -1,7 +1,7 @@
 import { WorkElement } from "../components/workElement";
 import { TitleComponent } from "../components/titleComponent";
 
-export const WorkAll = () => {
+export const WorkAllPage = () => {
     type WorkType = {
         workSrc: string;
         workTitle: string;

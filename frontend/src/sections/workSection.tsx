@@ -1,9 +1,9 @@
-import { WorkElement } from "./workElement";
-import { TitleComponent } from "./titleComponent";
+import { WorkElement } from "../components/workElement";
+import { TitleComponent } from "../components/titleComponent";
 
 import { useNavigate } from "react-router-dom";
 
-export const WorkComponent = () => {
+export const WorkSection = () => {
     type WorkType = {
         workSrc: string;
         workTitle: string;
