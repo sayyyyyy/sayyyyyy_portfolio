@@ -7,7 +7,7 @@ export const HistoryAllPage = () => {
         {historyAge: "2021.03", historyContent: "プログラミングを始める", historyDescription: ""},
         {historyAge: "2021.03", historyContent: "ハッカソン初参加", historyDescription: ""},
         {historyAge: "2021.05", historyContent: "CODEGYM Academy受講", historyDescription: ""},
-        {historyAge: "2021.10", historyContent: "HacU Meijo参加", historyDescription: ""},
+        {historyAge: "2021.10", historyContent: "HackU Meijo参加", historyDescription: ""},
         {historyAge: "2021.11", historyContent: "フルスタックエンジニアとして長期インターン開始", historyDescription: ""}
     ]
 

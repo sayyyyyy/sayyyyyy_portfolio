@@ -1,5 +1,11 @@
+import { useNavigate } from "react-router-dom";
 
 export const HeaderComponent = () => {
+    const navigate = useNavigate()
+    const test = () => {
+        navigate('/')
+    }
+
     return (
         <header className="flex fixed bg-zinc-300 w-screen justify-between">
             <a href="#skill-container"><p>SKILL</p></a>

@@ -79,7 +79,7 @@ export const WorkSection = () => {
             workResponsibilty: "すべて"
         },
         {
-            workSrc: "", 
+            workSrc: "images/works/MuscleOnlineWeb.png", 
             workTitle: "Muscle Online Web版", 
             workOverview: "他のユーザーと楽しく筋トレを行うサービス", 
             workObsession: "スマホ1台で楽しむことが可能で、1人ではなく様々な人と競いながら楽しく筋トレを行うことができる。", 
@@ -91,7 +91,7 @@ export const WorkSection = () => {
             workResponsibilty: "バックエンド、非同期処理"
         },
         {
-            workSrc: "", 
+            workSrc: "images/works/MuscleOnlineUnity.png", 
             workTitle: "Muscle Online Unity版", 
             workOverview: "他のユーザーと楽しく筋トレを行うサービス", 
             workObsession: "スマホ1台で楽しむことが可能で、1人ではなく様々な人と競いながら楽しく筋トレを行うことができる。", 
@@ -103,7 +103,7 @@ export const WorkSection = () => {
             workResponsibilty: "Unityでの機能作成、データベース処理、Photonを利用したマルチゲーム化"
         },
         {
-            workSrc: "", 
+            workSrc: "images/works/Youlink.png", 
             workTitle: "YOULINK", 
             workOverview: "学生エンジニア、デザイナーと気軽に交流でき、繋がりを作れるサービス。 募集者がタイトル・タグ・説明などを記入し、募集をかける。それを見たユーザーが日程を選択し、話す日を待つ。それだけでつながりを作ることができます。", 
             workObsession: "日程を募集者にあらかじめ記入してもらうことで日程調節をできるかぎり簡潔にした", 
@@ -115,7 +115,7 @@ export const WorkSection = () => {
             workResponsibilty: "DB連携処理"
         },
         {
-            workSrc: "", 
+            workSrc: "images/works/Getory.png", 
             workTitle: "Getory", 
             workOverview: "言語ごとのリポジトリやランダムなリポジトリを簡単に発見できるサービス", 
             workObsession: "様々な人に使ってもらえるように多言語対応、ダークモード切り替えを実装", 
@@ -127,7 +127,7 @@ export const WorkSection = () => {
             workResponsibilty: "すべて"
         },
         {
-            workSrc: "", 
+            workSrc: "images/works/Tsunaguma.png", 
             workTitle: "つなぐま", 
             workOverview: "いらないものを気軽に取引できるサービス", 
             workObsession: "繋がりを同大学に限定することで安心で気軽に取引できる", 
@@ -139,7 +139,7 @@ export const WorkSection = () => {
             workResponsibilty: "全体的なサポート"
         },
         {
-            workSrc: "", 
+            workSrc: "images/works/Fillin.png", 
             workTitle: "Fillin", 
             workOverview: "カップラーメンの待ち時間が楽しくなるアプリ", 
             workObsession: "", 
@@ -151,7 +151,7 @@ export const WorkSection = () => {
             workResponsibilty: "ブロックの変更処理、ブロックの保存、出現処理"
         },
         {
-            workSrc: "", 
+            workSrc: "images/works/arealAirreal.png", 
             workTitle: "areal-AirReal", 
             workOverview: "空中に絵を描いて写真にできるサービス。他の人のも見ることができる。", 
             workObsession: "", 
