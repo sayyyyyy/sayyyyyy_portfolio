@@ -164,9 +164,9 @@ export const WorkAllPage = () => {
     ]
 
     return (
-        <>
-            <TitleComponent>WORK</TitleComponent>
-            <div className="grid grid-cols-3">
+        <div className="relative top-24">
+            <TitleComponent>WORK ALL</TitleComponent>
+            <div className="md:grid md:grid-cols-2 xl:grid-cols-3 mt-16">
                 {allWorkList.map((work: WorkType) => {
                     return (
                         <WorkElement 
@@ -184,6 +184,6 @@ export const WorkAllPage = () => {
                     );
                 })}
             </div>
-        </>
+        </div>
     );
 }
