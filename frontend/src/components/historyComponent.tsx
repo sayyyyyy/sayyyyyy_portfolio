@@ -1,38 +1,32 @@
 import { TitleComponent } from "./titleComponent";
+import { HistoryElement } from "./historyElement";
+
 import "../components/history.css"
 
 import { useNavigate } from "react-router-dom";
 
-type HistoryElementProps = {
-    historyAge: string;
-    children: string;
-}
-
-const HistoryElement = (props: HistoryElementProps) => {
-    const {historyAge, children} = props
-    return(
-        <>
-            <dt className="text-right">{historyAge}</dt>
-            <dd><p>{children}</p></dd>
-        </>
-    );
-}
-
 export const HistoryComponent = () => {
     const navigate = useNavigate()
+    const historyList = [
+        {historyAge: "2021.03", historyContent: "プログラミングを始める"},
+        {historyAge: "2021.03", historyContent: "ハッカソン初参加"},
+        {historyAge: "2021.05", historyContent: "CODEGYM Academy受講"},
+        {historyAge: "2021.11", historyContent: "フルスタックエンジニアとして長期インターン開始"},
+        {historyAge: "2022.04", historyContent: "学生団体Idea×Techに運営兼メンターとして加入"},
+        {historyAge: "2022.05", historyContent: "技育CAMPハッカソンvol2参加　努力賞受賞"},
+        {historyAge: "2022.06", historyContent: "CODEGYM Academy先輩チューター業務"},
+        {historyAge: "2022.09", historyContent: "技育展・CCCu-22参加　CCC-u22にてファイナリスト選出、企業賞受賞"},
+        {historyAge: "2022.11", historyContent: "技育CAMPハッカソンvol8　努力賞受賞"},
+    ]
     return (
         <section id="history-container" className="h-screen flex flex-col justify-center">
             <TitleComponent>HISTORY</TitleComponent>
             <dl className="flex flex-wrap justify-between">
-                <HistoryElement historyAge="2021.03">プログラミングを始める</HistoryElement>
-                <HistoryElement historyAge="2021.03">技育CAMPハッカソンvol1にてハッカソン初参加</HistoryElement>
-                <HistoryElement historyAge="2021.05">CODEGYM Academy受講</HistoryElement>
-                <HistoryElement historyAge="2021.11">フルスタックエンジニアとして長期インターン開始</HistoryElement>
-                <HistoryElement historyAge="2022.04">学生団体Idea×Techに運営兼メンターとして加入</HistoryElement>
-                <HistoryElement historyAge="2022.05">技育CAMPハッカソンvol2参加 努力賞受賞</HistoryElement>
-                <HistoryElement historyAge="2022.06">CODEGYM Academyにて先輩チューター業務</HistoryElement>
-                <HistoryElement historyAge="2022.09">技育展・CCCu-22参加 CCCu-22にてファイナリスト選出・企業賞受賞</HistoryElement>
-                <HistoryElement historyAge="2022.11">技育CAMPハッカソンvol8参加 努力賞受賞</HistoryElement>
+                {historyList.map((history) => {
+                    return (
+                        <HistoryElement historyAge={history.historyAge}>{history.historyContent}</HistoryElement>
+                    );
+                })}
             </dl>
             <p onClick={() => {navigate('/historyAll')}}>すべて見る</p>
         </section>
