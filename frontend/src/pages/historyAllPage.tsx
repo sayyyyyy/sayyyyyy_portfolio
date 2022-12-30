@@ -1,6 +1,7 @@
 import "../components/history.css"
 
 import { HistoryElement } from "../components/historyElement"
+import { TitleComponent } from "../components/titleComponent"
 
 export const HistoryAllPage = () => {
     const history2021 = [
@@ -28,12 +29,15 @@ export const HistoryAllPage = () => {
 
     const historyAll = [...history2021, ...history2022]
     return (
-        <dl className="flex flex-wrap justify-between">
-            {historyAll.map((history) => {
-                return (
-                    <HistoryElement historyAge={history.historyAge} historyDescription={history.historyDescription}>{history.historyContent}</HistoryElement>
-                );
-            })}
-        </dl>
+        <div className="relative top-24">
+            <TitleComponent>History All</TitleComponent>
+            <dl className="flex flex-wrap justify-between mt-4">
+                {historyAll.map((history) => {
+                    return (
+                        <HistoryElement historyAge={history.historyAge} historyDescription={history.historyDescription}>{history.historyContent}</HistoryElement>
+                    );
+                })}
+            </dl>
+        </div>
     );
 }
