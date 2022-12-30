@@ -1,15 +1,13 @@
-import { WorkElement } from "./workElement";
-import { TitleComponent } from "./titleComponent";
+import { WorkElement } from "../components/workElement";
+import { TitleComponent } from "../components/titleComponent";
 
-import { useNavigate } from "react-router-dom";
-
-export const WorkComponent = () => {
+export const WorkAll = () => {
     type WorkType = {
         workSrc: string;
         workTitle: string;
     }
 
-    const workList = [
+    const allWorkList = [
         {workSrc: "images/works/KnowledgeLibrary.png", workTitle: "Knowledge Library"},
         {workSrc: "images/works/MusicHouse.png", workTitle: "Music House"},
         {workSrc: "images/works/GameMatching.png", workTitle: "ゲームでマッチング"},
@@ -17,19 +15,16 @@ export const WorkComponent = () => {
         {workSrc: "images/works/Sugures.png", workTitle: "すぐレス"},
     ]
 
-    const navigate = useNavigate()
-
     return (
-        <section id="work-container" className="h-screen flex flex-col justify-center">
+        <>
             <TitleComponent>WORK</TitleComponent>
             <div className="grid grid-cols-3">
-                {workList.map((work: WorkType) => {
+                {allWorkList.map((work: WorkType) => {
                     return (
                         <WorkElement workSrc={work.workSrc} workTitle={work.workTitle}></WorkElement>
                     );
                 })}
             </div>
-            <p onClick={() => {navigate('/workAll')}}>すべて見る</p>
-        </section>
+        </>
     );
 }

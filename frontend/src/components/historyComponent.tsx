@@ -1,6 +1,8 @@
 import { TitleComponent } from "./titleComponent";
 import "../components/history.css"
 
+import { useNavigate } from "react-router-dom";
+
 type HistoryElementProps = {
     historyAge: string;
     children: string;
@@ -17,6 +19,7 @@ const HistoryElement = (props: HistoryElementProps) => {
 }
 
 export const HistoryComponent = () => {
+    const navigate = useNavigate()
     return (
         <section id="history-container" className="h-screen flex flex-col justify-center">
             <TitleComponent>HISTORY</TitleComponent>
@@ -31,6 +34,7 @@ export const HistoryComponent = () => {
                 <HistoryElement historyAge="2022.09">技育展・CCCu-22参加 CCCu-22にてファイナリスト選出・企業賞受賞</HistoryElement>
                 <HistoryElement historyAge="2022.11">技育CAMPハッカソンvol8参加 努力賞受賞</HistoryElement>
             </dl>
+            <p onClick={() => {navigate('/historyAll')}}>すべて見る</p>
         </section>
     );
 }
