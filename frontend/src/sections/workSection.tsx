@@ -103,7 +103,7 @@ export const WorkSection = () => {
                     );
                 })}
             </div>
-            <p onClick={() => {navigate('/workAll')}} className="flex justify-end mt-8 text-zinc-400">すべて見る ＞</p>
+            <p onClick={() => {navigate('/workAll')}} className="flex justify-end mt-8 text-zinc-400 cursor-pointer">すべて見る ＞</p>
         </section>
     );
 }
