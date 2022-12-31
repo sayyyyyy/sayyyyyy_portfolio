@@ -1,5 +1,7 @@
 import { useLocation } from "react-router-dom";
 
+import { TitleComponent } from "../components/titleComponent";
+
 type workDetailProps = {
     workSrc: string;
     workTitle: string
@@ -18,27 +20,33 @@ export const WorkDetailPage = () => {
 
     const {workSrc, workTitle, workOverview, workObsession, workSkill, workPeriod, workLink, githubLink, workNumOfPeople, workResponsibilty} = location.state
     return (
-        <div>
-            <h2>{workTitle}</h2>
-            <div className="flex">
-                <img alt="work image" src={workSrc} className="w-64"></img>
-                <div>
-                    <p>アプリ概要</p>
-                    <p>{workOverview}</p>
-                    <p>開発期間</p>
-                    <p>{workPeriod}</p>
-                    <p>開発人数</p>
-                    <p>{workNumOfPeople}</p>
-                    <p>担当</p>
-                    <p>{workResponsibilty}</p>
-                    <br />
-                    <p>{workObsession}</p>
+        <div className="relative top-24">
+            <TitleComponent>{workTitle}</TitleComponent>
+            <div className="md:flex">
+                <img alt="work image" src={workSrc} className=""></img>
+                <div className="flex flex-col items-start m-6">
+                    <div className="mt-8 flex flex-col items-start">
+                        <p className="font-bold">アプリ概要</p>
+                        <p className="text-left">{workOverview}</p>
+                    </div>
+                    <div className="mt-4 flex flex-col items-start">
+                        <p className="font-bold">開発期間</p>
+                        <p className="text-left">{workPeriod}</p>
+                    </div>
+                    <div className="mt-4 flex flex-col items-start">
+                        <p className="font-bold">開発人数</p>
+                        <p className="text-left">{workNumOfPeople}</p>
+                    </div>
+                    <div className="mt-4 flex flex-col items-start">
+                        <p className="font-bold">担当</p>
+                        <p className="align-left">{workResponsibilty}</p>
+                    </div>
                     {(() => {
                         if (workLink) {
                             return (
-                                <div>
-                                    <p>アプリリンク</p>
-                                    <p>{workLink}</p>
+                                <div className="mt-4 flex flex-col items-start">
+                                    <p className="font-bold">アプリリンク</p>
+                                    <p className="text-left">{workLink}</p>
                                 </div>
                             );
                         }
@@ -47,19 +55,21 @@ export const WorkDetailPage = () => {
                     {(() => {
                         if (githubLink) {
                             return (
-                                <>
-                                    <p>GitHubリンク</p>
-                                    <p>{githubLink}</p>
-                                </>
+                                <div className="mt-4 flex flex-col items-start">
+                                    <p className="font-bold">GitHubリンク</p>
+                                    <p className="text-left">{githubLink}</p>
+                                </div>
                             );
                         }
                     })()}
+                    <br />
+                    <p className="text-left">{workObsession}</p>
                 </div>
             </div>
-            <div className="flex">
+            <div className="flex overflow-scroll">
                 {workSkill.map((skill: string) => {
                     return (
-                        <p>{skill}</p>
+                        <p className="flex items-center justify-center m-2 p-2 bg-zinc-400 rounded-3xl">{skill}</p>
                     );
                 })}
             </div>
