@@ -81,9 +81,13 @@ export const WorkSection = () => {
     ]
 
     const navigate = useNavigate()
+    const navigateWorkAll = () => {
+        navigate('/workAll')
+        window.scrollTo(0, 0)
+    }
 
     return (
-        <section id="work-container" className="mt-24">
+        <section id="work-container">
             <TitleComponent>WORK</TitleComponent>
             <div className="md:grid md:grid-cols-2 xl:grid-cols-3 mt-16">
                 {workList.map((work: WorkType) => {
@@ -103,7 +107,7 @@ export const WorkSection = () => {
                     );
                 })}
             </div>
-            <p onClick={() => {navigate('/workAll')}} className="flex justify-end mt-8 text-zinc-400 cursor-pointer">すべて見る ＞</p>
+            <p onClick={() => {navigateWorkAll()}} className="flex justify-end mt-8 text-zinc-400 cursor-pointer">すべて見る ＞</p>
         </section>
     );
 }

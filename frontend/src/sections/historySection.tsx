@@ -7,6 +7,11 @@ import { useNavigate } from "react-router-dom";
 
 export const HistorySection = () => {
     const navigate = useNavigate()
+    const navigateHistoryAll = () => {
+        navigate('/historyAll')
+        window.scrollTo(0, 0)
+    }
+
     const historyList = [
         {historyAge: "2021.03", historyContent: "プログラミングを始める", historyDescription: "技育祭に参加したことをきっかけにプログラミングを始める"},
         {historyAge: "2021.03", historyContent: "ハッカソン初参加", historyDescription: "技育祭でハッカソンの存在を知り参加する。このハッカソンの後からガッツリプログラミングをするようになる"},
@@ -28,7 +33,7 @@ export const HistorySection = () => {
                     );
                 })}
             </dl>
-            <p onClick={() => {navigate('/historyAll')}} className="flex justify-end mt-8 text-zinc-400 cursor-pointer">すべて見る ＞</p>
+            <p onClick={() => {navigateHistoryAll()}} className="flex justify-end mt-8 text-zinc-400 cursor-pointer">すべて見る ＞</p>
         </section>
     );
 }

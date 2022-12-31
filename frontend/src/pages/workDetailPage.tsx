@@ -23,7 +23,7 @@ export const WorkDetailPage = () => {
         <div className="relative top-24">
             <TitleComponent>{workTitle}</TitleComponent>
             <div className="md:flex">
-                <img alt="work image" src={workSrc} className=""></img>
+                <img alt="work image" src={workSrc} className="w-1/2 m-6"></img>
                 <div className="flex flex-col items-start m-6">
                     <div className="mt-8 flex flex-col items-start">
                         <p className="font-bold">アプリ概要</p>

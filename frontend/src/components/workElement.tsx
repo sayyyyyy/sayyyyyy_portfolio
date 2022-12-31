@@ -16,9 +16,11 @@ type workElementProps = {
 
 export const WorkElement = (props: workElementProps) => {
     const { workSrc, workTitle, workOverview, workObsession, workSkill, workPeriod, workLink, githubLink, workNumOfPeople, workResponsibilty } = props
-
+    const scrollTop = () => {
+        window.scrollTo(0, 0)
+    }
     return (
-        <Link to="/workDetail" state={{
+        <Link onClick={() => {scrollTop()}} to="/workDetail" state={{
             workSrc:workSrc, 
             workTitle:workTitle, 
             workOverview:workOverview, 
