@@ -37,10 +37,10 @@ export const SkillSection = () => {
     ]
 
     return(
-        <div id="skill-container" className="">
+        <div id="skill-container" className="w-screen">
             <TitleComponent>SKILL</TitleComponent>
             <h3>WebFrontEnd</h3>
-            <div className="flex">
+            <div className="flex flex-wrap">
             {webFrontendSkillList.map((skill) => {
                 return (
                     <SkillElement skillName={skill.skillName}/>
@@ -48,7 +48,7 @@ export const SkillSection = () => {
             })}
             </div>
             <h3>WebBackEnd</h3>
-            <div className="flex">
+            <div className="flex flex-wrap">
             {webBackEndSkillList.map((skill) => {
                 return (
                     <SkillElement skillName={skill.skillName}/>
@@ -56,7 +56,7 @@ export const SkillSection = () => {
             })}
             </div>
             <h3>Game</h3>
-            <div className="flex">
+            <div className="flex flex-wrap">
             {gameSkillList.map((skill) => {
                 return (
                     <SkillElement skillName={skill.skillName}/>
@@ -64,7 +64,7 @@ export const SkillSection = () => {
             })}
             </div>
             <h3>Mobile</h3>
-            <div className="flex">
+            <div className="flex flex-wrap">
             {mobileSkillList.map((skill) => {
                 return (
                     <SkillElement skillName={skill.skillName}/>
@@ -72,7 +72,7 @@ export const SkillSection = () => {
             })}
             </div>
             <h3>Others</h3>
-            <div className="flex">
+            <div className="flex flex-wrap">
             {otherSkillList.map((skill) => {
                 return (
                     <SkillElement skillName={skill.skillName}/>
