@@ -1,4 +1,3 @@
-import { useNavigate } from "react-router-dom";
 import { HashLink } from 'react-router-hash-link';
 import React, { useState } from 'react';
 
@@ -20,8 +19,8 @@ export const HeaderComponent = () => {
 
             <img onClick={menuFunction} src="images/menu.png" className="w-8 ml-auto md:hidden"></img>
             {openMenu ? (
-                <div className="w-screen absolute left-0 top-20 text-2xl bg-zinc-200 md:hidden">
-                    <HashLink smooth to="/#skill-container"><p className="cursor-pointer leading-10">SKILL</p></HashLink>
+                <div className="w-screen absolute left-0 top-20 text-2xl font-light bg-zinc-200/75 md:hidden">
+                    <HashLink smooth to="/#skill-container"><div className="cursor-pointer leading-10 hover:bg-zinc-400/75">SKILL</div></HashLink>
                     <HashLink smooth to="/#work-container"><p className="cursor-pointer leading-10">WORK</p></HashLink>
                     <HashLink smooth to="/#history-container"><p className="cursor-pointer leading-10">HISTORY</p></HashLink>
                     <HashLink smooth to="/#sns-container"><p className="cursor-pointer leading-10">SNS</p></HashLink>

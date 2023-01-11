@@ -2,18 +2,18 @@ import { useLocation } from "react-router-dom";
 
 import { TitleComponent } from "../components/titleComponent";
 
-type workDetailProps = {
-    workSrc: string;
-    workTitle: string
-    workOverview: string;
-    workObsession: string; 
-    workSkill: Array<string>;
-    workPeriod: string, 
-    workLink: string, 
-    githubLink: string, 
-    workNumOfPeople: number,
-    workResponsibilty: string
-}
+// type workDetailProps = {
+//     workSrc: string;
+//     workTitle: string
+//     workOverview: string;
+//     workObsession: string; 
+//     workSkill: Array<string>;
+//     workPeriod: string, 
+//     workLink: string, 
+//     githubLink: string, 
+//     workNumOfPeople: number,
+//     workResponsibilty: string
+// }
 
 export const WorkDetailPage = () => {
     const location = useLocation()
@@ -23,7 +23,7 @@ export const WorkDetailPage = () => {
         <div className="relative top-24">
             <TitleComponent>{workTitle}</TitleComponent>
             <div className="md:flex">
-                <img alt="work image" src={workSrc} className="md:w-1/2"></img>
+                <img alt="work image" src={workSrc} className="m-auto md:m-4 md:max-w-[50%] max-h-screen"></img>
                 <div className="flex flex-col items-start m-6">
                     <div className="mt-8 flex flex-col items-start">
                         <p className="font-bold">アプリ概要</p>
@@ -66,7 +66,7 @@ export const WorkDetailPage = () => {
                     <p className="text-left">{workObsession}</p>
                 </div>
             </div>
-            <div className="flex overflow-scroll">
+            <div className="flex overflow-scroll m-4">
                 {workSkill.map((skill: string) => {
                     return (
                         <p className="flex items-center justify-center m-2 p-2 bg-zinc-400 rounded-3xl whitespace-nowrap">{skill}</p>
