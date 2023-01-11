@@ -51,7 +51,7 @@ export const WorkAllPage = () => {
             workLink: "", 
             githubLink: "https://github.com/sayyyyyy/matching-in-the-game", 
             workNumOfPeople: 4,
-            workResponsibilty: "電卓部分の作成。ゴミ箱部分の作成"
+            workResponsibilty: "WebSocketを利用したリアルタイム通信、データベース周り"
         },
         {
             workSrc: "images/works/SpaceShuttle.png", 
