@@ -22,8 +22,7 @@ export const HistoryAllPage = () => {
         {historyAge: "2022.11", historyContent: "XRCreativeAward参加", historyDescription: "Fillinというスマホアプリを開発"},
         {historyAge: "2022.11", historyContent: "技育CAMPハッカソンvol8　努力賞受賞", historyDescription: "GetoryというWebアプリを開発する。初めて1人でハッカソンに参加し、努力賞を受賞"},
         {historyAge: "2022.12", historyContent: "HackU Meijo参加", historyDescription: "つなぐまというWebアプリを開発"},
-        {historyAge: "2022.12", historyContent: "WithARハッカソン参加", historyDescription: "areal-Airrealというスマホアプリを開発"},
-        {historyAge: "2022.12", historyContent: "学生団体SAIBASIに加入", historyDescription: "運営として加入"},
+        {historyAge: "2022.12", historyContent: "WithARハッカソン参加", historyDescription: "areal-Airrealというスマホアプリを開発"}
     ]
 
     const history2023 = []
