@@ -2,6 +2,7 @@ import { WorkElement } from "../components/workElement";
 import { TitleComponent } from "../components/titleComponent";
 
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 export const WorkSection = () => {
     type WorkType = {
@@ -80,10 +81,13 @@ export const WorkSection = () => {
         },
     ]
 
+    const [openMenu, setOpenMenu] = useState(false);
+
     const navigate = useNavigate()
     const navigateWorkAll = () => {
         navigate('/workAll')
         window.scrollTo(0, 0)
+        setOpenMenu(!openMenu);
     }
 
     return (
@@ -92,7 +96,8 @@ export const WorkSection = () => {
             <div className="md:grid md:grid-cols-2 xl:grid-cols-3 mt-16">
                 {workList.map((work: WorkType) => {
                     return (
-                        <WorkElement 
+                        <WorkElement
+                            key={work.workTitle} 
                             workSrc={work.workSrc} 
                             workTitle={work.workTitle} 
                             workOverview={work.workOverview} 

@@ -169,7 +169,8 @@ export const WorkAllPage = () => {
             <div className="md:grid md:grid-cols-2 xl:grid-cols-3 mt-16">
                 {allWorkList.map((work: WorkType) => {
                     return (
-                        <WorkElement 
+                        <WorkElement
+                            key={work.workTitle}
                             workSrc={work.workSrc} 
                             workTitle={work.workTitle} 
                             workOverview={work.workOverview} 

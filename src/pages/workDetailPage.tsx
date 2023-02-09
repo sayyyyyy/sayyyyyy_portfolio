@@ -69,7 +69,7 @@ export const WorkDetailPage = () => {
             <div className="flex overflow-scroll m-4">
                 {workSkill.map((skill: string) => {
                     return (
-                        <p className="flex items-center justify-center m-2 p-2 bg-zinc-400 rounded-3xl whitespace-nowrap">{skill}</p>
+                        <p key={skill} className="flex items-center justify-center m-2 p-2 bg-zinc-400 rounded-3xl whitespace-nowrap">{skill}</p>
                     );
                 })}
             </div>

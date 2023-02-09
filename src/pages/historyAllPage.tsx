@@ -31,6 +31,9 @@ export const HistoryAllPage = () => {
         {historyAge: "2023.01", historyContent: "長期インターン始めようぜ会　企画", historyDescription: "東海圏の学生エンジニア向けに長期インターン始めようぜ会を企画、運営全て1人で担当"},
     ]
 
+    // データの取得
+    // const 
+
     const historyAll = [...history2021, ...history2022, ...history2023]
     return (
         <div className="relative top-24">
@@ -38,7 +41,7 @@ export const HistoryAllPage = () => {
             <dl className="flex flex-wrap justify-between mt-4">
                 {historyAll.map((history) => {
                     return (
-                        <HistoryElement historyAge={history.historyAge} historyDescription={history.historyDescription}>{history.historyContent}</HistoryElement>
+                        <HistoryElement key={history.historyDescription} historyAge={history.historyAge} historyDescription={history.historyDescription}>{history.historyContent}</HistoryElement>
                     );
                 })}
             </dl>

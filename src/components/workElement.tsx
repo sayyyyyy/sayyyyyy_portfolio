@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 
@@ -16,8 +17,13 @@ type workElementProps = {
 
 export const WorkElement = (props: workElementProps) => {
     const { workSrc, workTitle, workOverview, workObsession, workSkill, workPeriod, workLink, githubLink, workNumOfPeople, workResponsibilty } = props
+
+    const [openMenu, setOpenMenu] = useState(false);
+
     const scrollTop = () => {
         window.scrollTo(0, 0)
+        setOpenMenu(!openMenu)
+        console.log(openMenu)
     }
     return (
         <Link onClick={() => {scrollTop()}} to="/workDetail" state={{

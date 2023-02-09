@@ -43,7 +43,7 @@ export const SkillSection = () => {
             <div className="flex flex-wrap m-8 border-2 rounded-md">
             {webFrontendSkillList.map((skill) => {
                 return (
-                    <SkillElement skillName={skill.skillName}/>
+                    <SkillElement key={skill.skillName} skillName={skill.skillName}/>
                 );
             })}
             </div>
@@ -51,7 +51,7 @@ export const SkillSection = () => {
             <div className="flex flex-wrap m-8 border-2 rounded-xl">
             {webBackEndSkillList.map((skill) => {
                 return (
-                    <SkillElement skillName={skill.skillName}/>
+                    <SkillElement key={skill.skillName} skillName={skill.skillName}/>
                 );
             })}
             </div>
@@ -59,7 +59,7 @@ export const SkillSection = () => {
             <div className="flex flex-wrap m-8 border-2 rounded-xl">
             {gameSkillList.map((skill) => {
                 return (
-                    <SkillElement skillName={skill.skillName}/>
+                    <SkillElement key={skill.skillName} skillName={skill.skillName}/>
                 );
             })}
             </div>
@@ -67,7 +67,7 @@ export const SkillSection = () => {
             <div className="flex flex-wrap m-8 border-2 rounded-xl">
             {mobileSkillList.map((skill) => {
                 return (
-                    <SkillElement skillName={skill.skillName}/>
+                    <SkillElement key={skill.skillName} skillName={skill.skillName}/>
                 );
             })}
             </div>
@@ -75,7 +75,7 @@ export const SkillSection = () => {
             <div className="flex flex-wrap m-8 border-2 rounded-xl">
             {otherSkillList.map((skill) => {
                 return (
-                    <SkillElement skillName={skill.skillName}/>
+                    <SkillElement key={skill.skillName} skillName={skill.skillName}/>
                 );
             })}
             </div>
