@@ -4,11 +4,15 @@ import { HistoryElement } from "../components/historyElement";
 import "../components/history.css"
 
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 export const HistorySection = () => {
+    const [openMenu, setOpenMenu] = useState(false);
+    
     const navigate = useNavigate()
     const navigateHistoryAll = () => {
         navigate('/historyAll')
+        setOpenMenu(!openMenu)
         window.scrollTo(0, 0)
     }
 
@@ -29,7 +33,7 @@ export const HistorySection = () => {
             <dl className="flex flex-wrap justify-between mt-6">
                 {historyList.map((history) => {
                     return (
-                        <HistoryElement historyAge={history.historyAge} historyDescription={history.historyDescription}>{history.historyContent}</HistoryElement>
+                        <HistoryElement key={history.historyDescription} historyAge={history.historyAge} historyDescription={history.historyDescription}>{history.historyContent}</HistoryElement>
                     );
                 })}
             </dl>

@@ -3,11 +3,13 @@ import React, { useState } from 'react';
 
 export const HeaderComponent = () => {
     const [openMenu, setOpenMenu] = useState(false);
+    console.log(openMenu)
     
     const menuFunction = () => {
         setOpenMenu(!openMenu);
     };
 
+    // setOpenMenuが変更されたらここを再描画したい
     return (
         <header className="flex md:grid md:grid-cols-7 fixed bg-zinc-400 w-screen justify-items-center items-center p-4 z-10 text-xl">
             <span className=""></span>
