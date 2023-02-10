@@ -1,3 +1,5 @@
+import axios from "axios"
+
 import "../components/history.css"
 
 import { HistoryElement } from "../components/historyElement"
@@ -21,6 +23,7 @@ export const HistoryAllPage = () => {
         {historyAge: "2022.10", historyContent: "JPHACKS参加", historyDescription: "YOULINKというWebアプリを開発"},
         {historyAge: "2022.11", historyContent: "XRCreativeAward参加", historyDescription: "Fillinというスマホアプリを開発"},
         {historyAge: "2022.11", historyContent: "技育CAMPハッカソンvol8　努力賞受賞", historyDescription: "GetoryというWebアプリを開発する。初めて1人でハッカソンに参加し、努力賞を受賞"},
+        {historyAge: "2022.12", historyContent: "学生団体SAIBASHIに加入", historyDescription: "学生団体SAIBASHIに運営として加入。団体の設立に携わる"},
         {historyAge: "2022.12", historyContent: "HackU Meijo参加", historyDescription: "つなぐまというWebアプリを開発"},
         {historyAge: "2022.12", historyContent: "WithARハッカソン参加", historyDescription: "areal-Airrealというスマホアプリを開発"},
     ]
@@ -29,10 +32,8 @@ export const HistoryAllPage = () => {
         {historyAge: "2023.01", historyContent: "Webサービス開発者の会 登壇", historyDescription: "さくらのマイクロコミュニティ （Webサービス開発者の会） #5にて登壇"},
         {historyAge: "2023.01", historyContent: "インプット・アウトプットどうしてる? 登壇", historyDescription: "【LT会】インプット・アウトプットどうしてる? in 名古屋にて登壇"},
         {historyAge: "2023.01", historyContent: "長期インターン始めようぜ会　企画", historyDescription: "東海圏の学生エンジニア向けに長期インターン始めようぜ会を企画、運営全て1人で担当"},
+        {historyAge: "2023.01", historyContent: "技育CAMPハッカソンvol10参加　優秀賞受賞", historyDescription: "Idea HelperというWebアプリを開発。初めて一緒にハッカソンに出場した人とチームを組み、優秀賞を受賞"},
     ]
-
-    // データの取得
-    // const 
 
     const historyAll = [...history2021, ...history2022, ...history2023]
     return (

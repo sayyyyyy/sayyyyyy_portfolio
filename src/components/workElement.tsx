@@ -21,9 +21,9 @@ export const WorkElement = (props: workElementProps) => {
     const [openMenu, setOpenMenu] = useState(false);
 
     const scrollTop = () => {
-        window.scrollTo(0, 0)
         setOpenMenu(!openMenu)
         console.log(openMenu)
+        window.scrollTo(0, 0)
     }
     return (
         <Link onClick={() => {scrollTop()}} to="/workDetail" state={{
