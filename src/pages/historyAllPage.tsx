@@ -3,20 +3,24 @@ import "../components/history.css"
 
 import { HistoryElement } from "../components/historyElement"
 import { TitleComponent } from "../components/titleComponent"
-import axios from "axios"
+
+import { getSpreadSheetData } from "../scripts/getSpreadSheetData"
 
 export const HistoryAllPage = () => {
     const [historyAll, setHistory] = useState([])
 
     useEffect(() => {
-        async function fetchData() {
-            const url = process.env.REACT_APP_SPREADSHEET_URL || ''
-            const response = await axios.get(url);
-            setHistory(response.data);
-            return response;
+        const request = {
+            params: {
+                operation: 'historyAll'
+            }
+        }
+
+        const getHistoryData = async () => {
+            setHistory(await getSpreadSheetData(request))
         }
         
-        fetchData();
+        getHistoryData()
     }, []);
 
     return (
