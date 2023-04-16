@@ -9,7 +9,7 @@ export const WorkSection = () => {
     const [workList, setWorkList] = useState([])
 
     type WorkType = {
-        workSrc: string;
+        workImage: string;
         workTitle: string
         workOverview: string;
         workObsession: string; 
@@ -52,7 +52,7 @@ export const WorkSection = () => {
                     return (
                         <WorkElement
                             key={work.workTitle} 
-                            workSrc={work.workSrc} 
+                            workImage={work.workImage} 
                             workTitle={work.workTitle} 
                             workOverview={work.workOverview} 
                             workObsession={work.workObsession} 

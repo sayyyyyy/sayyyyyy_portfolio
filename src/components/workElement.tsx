@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 
 type workElementProps = {
-    workSrc: string;
+    workImage: string;
     workTitle: string
     workOverview: string;
     workObsession: string; 
@@ -16,7 +16,7 @@ type workElementProps = {
 }
 
 export const WorkElement = (props: workElementProps) => {
-    const { workSrc, workTitle, workOverview, workObsession, workSkill, workPeriod, workLink, githubLink, workNumOfPeople, workResponsibilty } = props
+    const { workImage, workTitle, workOverview, workObsession, workSkill, workPeriod, workLink, githubLink, workNumOfPeople, workResponsibilty } = props
 
     const [openMenu, setOpenMenu] = useState(false);
 
@@ -26,7 +26,7 @@ export const WorkElement = (props: workElementProps) => {
     }
     return (
         <Link onClick={() => {scrollTop()}} to="/workDetail" state={{
-            workSrc:workSrc, 
+            workImage:workImage, 
             workTitle:workTitle, 
             workOverview:workOverview, 
             workObsession:workObsession,
@@ -38,7 +38,7 @@ export const WorkElement = (props: workElementProps) => {
             workResponsibilty: workResponsibilty
         }}>
             <div className="flex flex-col items-center m-8">
-                <img alt="work image" src={workSrc} className="h-64"></img>
+                <img alt="work image" src={workImage} className="h-64"></img>
                 <p className="bg-zinc-300 text-2xl w-full h-10 flex items-center justify-center">{workTitle}</p>
             </div>
         </Link>
