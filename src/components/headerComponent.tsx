@@ -3,8 +3,7 @@ import React, { useState } from 'react';
 
 export const HeaderComponent = () => {
     const [openMenu, setOpenMenu] = useState(false);
-    console.log(openMenu)
-    
+
     const menuFunction = () => {
         setOpenMenu(!openMenu);
     };

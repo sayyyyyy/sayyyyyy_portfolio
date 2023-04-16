@@ -22,7 +22,6 @@ export const WorkElement = (props: workElementProps) => {
 
     const scrollTop = () => {
         setOpenMenu(!openMenu)
-        console.log(openMenu)
         window.scrollTo(0, 0)
     }
     return (
