@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 export const HeaderComponent = () => {
     const [openMenu, setOpenMenu] = useState(false);
     console.log(openMenu)
-    
+
     const menuFunction = () => {
         setOpenMenu(!openMenu);
     };
@@ -19,7 +19,7 @@ export const HeaderComponent = () => {
             <HashLink smooth to="/#history-container"><p className="cursor-pointer hidden md:block">HISTORY</p></HashLink>
             <HashLink smooth to="/#sns-container"><p className="cursor-pointer hidden md:block">SNS</p></HashLink>
 
-            <img onClick={menuFunction} src="images/menu.png" className="w-8 ml-auto md:hidden"></img>
+            <img onClick={menuFunction} alt="menu" src="images/menu.png" className="w-8 ml-auto md:hidden"></img>
             {openMenu ? (
                 <div className="w-screen absolute left-0 top-20 text-2xl font-light bg-zinc-200/75 md:hidden">
                     <HashLink smooth to="/#skill-container"><div className="cursor-pointer leading-10 hover:bg-zinc-400/75">SKILL</div></HashLink>
@@ -27,7 +27,7 @@ export const HeaderComponent = () => {
                     <HashLink smooth to="/#history-container"><p className="cursor-pointer leading-10">HISTORY</p></HashLink>
                     <HashLink smooth to="/#sns-container"><p className="cursor-pointer leading-10">SNS</p></HashLink>
                 </div>
-            ): undefined}
+            ) : undefined}
         </header>
     );
 }

@@ -18,12 +18,12 @@ import { TitleComponent } from "../components/titleComponent";
 export const WorkDetailPage = () => {
     const location = useLocation()
 
-    const {workSrc, workTitle, workOverview, workObsession, workSkill, workPeriod, workLink, githubLink, workNumOfPeople, workResponsibilty} = location.state
+    const { workSrc, workTitle, workOverview, workObsession, workSkill, workPeriod, workLink, githubLink, workNumOfPeople, workResponsibilty } = location.state
     return (
         <div className="relative top-24">
             <TitleComponent>{workTitle}</TitleComponent>
             <div className="md:flex">
-                <img alt="work image" src={workSrc} className="m-auto md:m-4 md:max-w-[50%] max-h-screen"></img>
+                <img alt={workTitle} src={workSrc} className="m-auto md:m-4 md:max-w-[50%] max-h-screen"></img>
                 <div className="flex flex-col items-start m-6">
                     <div className="mt-8 flex flex-col items-start">
                         <p className="font-bold">アプリ概要</p>

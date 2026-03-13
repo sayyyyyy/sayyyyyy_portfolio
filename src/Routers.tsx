@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 // コンポーネントの読み込み
 import { MainPage } from "./pages/mainPage";
