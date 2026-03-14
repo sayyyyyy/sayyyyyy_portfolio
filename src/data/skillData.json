@@ -1,0 +1,76 @@
+{
+    "webFrontendSkillList": [
+        {
+            "skillName": "HTML"
+        },
+        {
+            "skillName": "CSS"
+        },
+        {
+            "skillName": "Sass"
+        },
+        {
+            "skillName": "Tailwind CSS"
+        },
+        {
+            "skillName": "JavaScript"
+        },
+        {
+            "skillName": "TypeScript",
+            "skillSrc": "images/skills/typescript.png"
+        },
+        {
+            "skillName": "Vue.js"
+        },
+        {
+            "skillName": "Nuxt.js"
+        },
+        {
+            "skillName": "React"
+        },
+        {
+            "skillName": "Angular.js"
+        }
+    ],
+    "webBackEndSkillList": [
+        {
+            "skillName": "Python"
+        },
+        {
+            "skillName": "Flask"
+        },
+        {
+            "skillName": "PHP"
+        },
+        {
+            "skillName": "C#"
+        }
+    ],
+    "gameSkillList": [
+        {
+            "skillName": "Unity"
+        }
+    ],
+    "mobileSkillList": [
+        {
+            "skillName": "Dart"
+        },
+        {
+            "skillName": "Flutter"
+        }
+    ],
+    "otherSkillList": [
+        {
+            "skillName": "C"
+        },
+        {
+            "skillName": "Git"
+        },
+        {
+            "skillName": "Docker"
+        },
+        {
+            "skillName": "Solidity"
+        }
+    ]
+}
