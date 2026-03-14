@@ -25,6 +25,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:coverage": "react-scripts test --coverage --watchAll=false",
     "eject": "react-scripts eject",
     "deploy": "rm -rf docs && mv build docs",
     "lint": "eslint ."
@@ -59,9 +60,16 @@
     "serialize-javascript": "^7.0.4",
     "webpack-dev-server": "^4.15.2",
     "ws": "^8.17.1",
-    "@tootallnate/once": "^3.0.1"
+    "@tootallnate/once": "^2.0.0"
   },
   "engines": {
     "node": "24.x"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!src/index.tsx",
+      "!src/reportWebVitals.ts"
+    ]
   }
 }
